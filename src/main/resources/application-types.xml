@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="sf_employee" format="json">
+      <types:shape format="weave" example="examples/sf_emplyee.json"><![CDATA[%dw 2.0
+
+type sf_employee = {|
+  Employee: Array<{|    Age__c: String,     Employee_Id__c: String,     DateOfBirth__c: String,     Designation__c: String,     Operation__c: String,     Department__c: String,     Salary__c: String,     Address__c: String  |}>
+|} {"example": "{\\\"Employee\\\":[{\\\"Age__c\\\":\\\"28\\\",\\\"Employee_Id__c\\\":\\\"2\\\",\\\"DateOfBirth__c\\\":\\\"1994-11-11\\\",\\\"Designation__c\\\":\\\"Mulesoft Developer\\\",\\\"Operation__c\\\":\\\"Insert\\\",\\\"Department__c\\\":\\\"Integration\\\",\\\"Salary__c\\\":\\\"70000.0\\\",\\\"Address__c\\\":\\\"Chennai\\\"},{\\\"Age__c\\\":\\\"24\\\",\\\"Employee_Id__c\\\":\\\"3\\\",\\\"DateOfBirth__c\\\":\\\"1996-11-11\\\",\\\"Designation__c\\\":\\\"Junior Mulesoft Developer\\\",\\\"Operation__c\\\":\\\"Insert\\\",\\\"Department__c\\\":\\\"Integration\\\",\\\"Salary__c\\\":\\\"30000.0\\\",\\\"Address__c\\\":\\\"Pune\\\"}]}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#7f97a77e-458e-4bec-b647-30a09b4ecf19">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="sf_employee"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

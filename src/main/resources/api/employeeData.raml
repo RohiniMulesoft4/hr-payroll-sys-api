@@ -1,0 +1,30 @@
+#%RAML 1.0 DataType
+
+description: configure validations to employee data
+
+properties:
+  Employee:
+    type: array
+    items:
+      properties:
+        Id:
+          type: number
+          required: false
+        Name:
+          type: string
+          required: false
+        DateOfBirth:
+          type: date-only
+          required: false
+        Designation:
+          type: string
+          required: false
+        Department:
+          type: string
+          required: false
+        Salary:
+          type: number
+          required: false
+        Operation:
+          type: string
+          required: false

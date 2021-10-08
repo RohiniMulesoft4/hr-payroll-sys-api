@@ -1,0 +1,25 @@
+{
+    "Employee" : 
+    [
+    {
+        "Age__c": "28",
+        "Employee_Id__c": "2",
+        "DateOfBirth__c": "1994-11-11",
+        "Designation__c": "Mulesoft Developer",
+        "Operation__c": "Insert",
+        "Department__c": "Integration",
+        "Salary__c": "70000.0",
+        "Address__c": "Chennai"
+    },
+    {
+        "Age__c": "24",
+        "Employee_Id__c": "3",
+        "DateOfBirth__c": "1996-11-11",
+        "Designation__c": "Junior Mulesoft Developer",
+        "Operation__c": "Insert",
+        "Department__c": "Integration",
+        "Salary__c": "30000.0",
+        "Address__c": "Pune"
+    }
+]
+}
